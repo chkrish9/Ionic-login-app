@@ -5,6 +5,9 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
+import { ProfilePage } from '../pages/profile/profile';
+
+import { HeaderComponent } from '../components/header/header';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -13,17 +16,25 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   declarations: [
     MyApp,
     LoginPage,
-    HomePage
+    HomePage,
+    ProfilePage,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp,{
+      platforms: {
+        ios: {
+          statusbarPadding: true
+        }
+      }}),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     LoginPage,
-    HomePage
+    HomePage,
+    ProfilePage
   ],
   providers: [
     StatusBar,

@@ -18,3 +18,22 @@ ion-item {
     background: none;
     padding: 0;
 }
+.content-ios{
+    .scroll-content{
+        padding-top: 60px;
+    } 
+}
+.scroll-content{
+    padding-top: 57px;
+}
+.menu-scroll{
+    .scroll-content{
+        padding-top: 0;
+    }
+}
+.toolbar.toolbar-ios.statusbar-padding{
+    padding-top: 24px;
+}
+.title.title-ios{
+    padding-top: 20px;
+}
