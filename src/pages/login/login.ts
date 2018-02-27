@@ -33,12 +33,7 @@ ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
 
-/**
- * 
- * 
- * @memberof LoginPage
- */
-login(){
+  login(){
     this.navCtrl.setRoot(HomePage);
   }
 }
