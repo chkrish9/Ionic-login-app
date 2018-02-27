@@ -3,25 +3,24 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { LoginPage } from '../pages/login/login';
-import { ProfilePage } from '../pages/profile/profile';
 
-import { HeaderComponent } from '../components/header/header';
+import { HomePageModule } from '../pages/home/home.module';
+import { LoginPageModule } from '../pages/login/login.module';
+import { ProfilePageModule } from '../pages/profile/profile.module';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 @NgModule({
   declarations: [
-    MyApp,
-    LoginPage,
-    HomePage,
-    ProfilePage,
-    HeaderComponent
+    MyApp
   ],
   imports: [
     BrowserModule,
+    HomePageModule,
+    LoginPageModule,
+    ProfilePageModule,
     IonicModule.forRoot(MyApp,{
       platforms: {
         ios: {
@@ -31,10 +30,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-    LoginPage,
-    HomePage,
-    ProfilePage
+    MyApp
   ],
   providers: [
     StatusBar,
