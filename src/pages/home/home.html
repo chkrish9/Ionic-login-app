@@ -4,15 +4,37 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Home</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="presentActionSheet()">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+<ion-content>
+  <div>
+    <ion-segment [(ngModel)]="work">
+      <ion-segment-button value="mywork">
+        My Work
+      </ion-segment-button>
+      <ion-segment-button value="alerts">
+        Alerts
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+  
+  <div [ngSwitch]="work">
+    <ion-list *ngSwitchCase="'mywork'">
+      <ion-item>
+        <h2>Ruby</h2>
+      </ion-item>
+    </ion-list>
+  
+    <ion-list *ngSwitchCase="'alerts'">
+      <ion-item>
+        <h2>Luna</h2>
+      </ion-item>
+    </ion-list>
+  </div>
 </ion-content>

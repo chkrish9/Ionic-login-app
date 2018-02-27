@@ -15,15 +15,30 @@ import { HomePage } from '../home/home';
   templateUrl: 'login.html',
 })
 export class LoginPage {
-
+/**
+ * Creates an instance of LoginPage.
+ * @param {NavController} navCtrl 
+ * @param {NavParams} navParams 
+ * @memberof LoginPage
+ */
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
-
-  ionViewDidLoad() {
+  
+/**
+ * 
+ * 
+ * @memberof LoginPage
+ */
+ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
 
-  login(){
-    this.navCtrl.push(HomePage);
+/**
+ * 
+ * 
+ * @memberof LoginPage
+ */
+login(){
+    this.navCtrl.setRoot(HomePage);
   }
 }
